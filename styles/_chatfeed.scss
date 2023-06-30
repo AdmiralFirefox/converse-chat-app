@@ -48,10 +48,12 @@
 
 .ce-my-message-timestamp {
   color: theme.$light-purple-color !important;
+  top: 0.8em !important;
 }
 
 .ce-their-message-timestamp {
-  color: hsla(0, 0%, 100%, 0.568) !important;
+  color: theme.$gray-color !important;
+  top: 0.8em !important;
 }
 
 #ce-send-message-button {
