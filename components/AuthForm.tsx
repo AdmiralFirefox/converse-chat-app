@@ -34,11 +34,7 @@ const AuthForm = () => {
           <button onClick={signInWithgoogle}>Sign In With Google</button>
         </>
       ) : (
-        <div>
-          <button onClick={signOutAccount}>Sign Out</button>
-          <h1>Welcome {user.email}!</h1>
-          <ChatRoom user={user} />
-        </div>
+        <ChatRoom user={user} signOutAccount={signOutAccount} />
       )}
     </>
   );

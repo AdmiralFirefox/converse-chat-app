@@ -3,13 +3,23 @@ import { MessageFormSocial } from "react-chat-engine";
 import axios from "axios";
 import { ChatEngine } from "react-chat-engine";
 import { UserInfo } from "@/lib/authcontext";
+import { useElementSize } from "@/hooks/useElementSize";
+import { useWindowSize } from "@/hooks/useWindowSize";
+import styles from "@/styles/ChatRoom.module.scss";
 
 interface ChatRoomProps {
   user: UserInfo | null;
+  signOutAccount: () => Promise<void>;
 }
 
-const ChatRoom = ({ user }: ChatRoomProps) => {
+const ChatRoom = ({ user, signOutAccount }: ChatRoomProps) => {
+  const [navBarRef, { height: navHeight }] = useElementSize();
+  const { height: windowHeight } = useWindowSize();
+
   const [loading, setLoading] = useState(true);
+
+  const currentTime = new Date();
+  const timeZoneOffSet = currentTime.getTimezoneOffset() / 60;
 
   const getFile = async (url: string) => {
     const res = await fetch(url);
@@ -67,12 +77,18 @@ const ChatRoom = ({ user }: ChatRoomProps) => {
 
   return (
     <>
+      <nav className={styles["navbar"]} ref={navBarRef}>
+        <h1>Converse</h1>
+        <button onClick={signOutAccount}>Sign Out</button>
+      </nav>
+
       <ChatEngine
-        height="100vh"
+        height={windowHeight - navHeight - 1}
         projectID={process.env.NEXT_PUBLIC_CHATENGINE_PROJECT_ID}
         userName={user?.email}
         userSecret={user?.uid}
         renderNewMessageForm={() => <MessageFormSocial />}
+        offset={Math.abs(timeZoneOffSet)}
       />
     </>
   );

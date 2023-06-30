@@ -1,0 +1,101 @@
+@use "colors" as theme;
+
+.ce-chat-feed-column {
+  background-color: theme.$chatfeed-color !important;
+}
+
+.ce-chat-feed-container {
+  background-color: theme.$chatfeed-color !important;
+  border: 3px solid theme.$chatfeed-color !important;
+  overflow-y: auto !important;
+  position: relative !important;
+  top: 4.6em !important;
+  height: calc(100% - 8.1em) !important;
+}
+
+.ce-feed-container-top {
+  height: 1.15em !important;
+}
+
+.ce-feed-container-bottom {
+  height: 0 !important;
+}
+
+.ce-chat-title-container {
+  background-color: theme.$chatfeed-color !important;
+  border-radius: 0px !important;
+  border: none !important;
+  height: 4.8em !important;
+}
+
+.ce-primary-button {
+  background-color: theme.$light-purple-color !important;
+  border-radius: 5px !important;
+}
+
+.ce-message-date-text {
+  color: theme.$gray-color !important;
+}
+
+.ce-my-message-bubble {
+  background-color: theme.$light-purple-color !important;
+}
+
+.ce-my-message-sinding-bubble {
+  background-color: theme.$light-purple-color !important;
+}
+
+.ce-my-message-timestamp {
+  color: theme.$light-purple-color !important;
+}
+
+.ce-their-message-timestamp {
+  color: hsla(0, 0%, 100%, 0.568) !important;
+}
+
+#ce-send-message-button {
+  background-color: theme.$light-purple-color !important;
+}
+
+#ce-ice-breaker-gif {
+  max-width: 115px !important;
+  margin-top: 30px !important;
+}
+
+.ce-social-message-form {
+  background-color: theme.$chatfeed-color !important;
+}
+
+.ce-message-images-row {
+  background: theme.$sidebar-color;
+}
+
+#msg-textarea {
+  border-width: 0px !important;
+  background-color: theme.$chatfeed-color !important;
+  color: theme.$white-color !important;
+  font-family: "Poppins", sans-serif !important;
+  font-weight: 500 !important;
+  font-size: 1rem !important;
+}
+
+#msg-textarea::placeholder {
+  color: theme.$dark-gray-color !important;
+}
+
+#ce-upload-document-icon {
+  color: theme.$white-color !important;
+}
+
+.ce-their-message-sender {
+  color: theme.$gray-color !important;
+}
+
+.ce-their-message-bubble {
+  background-color: theme.$dark-gray-color !important;
+  color: theme.$white-color !important;
+}
+
+.ce-user-typing-text {
+  color: theme.$gray-color !important;
+}

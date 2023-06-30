@@ -1,0 +1,33 @@
+@use "colors" as theme;
+
+.navbar {
+  background: theme.$light-purple-color;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em;
+
+  h1 {
+    color: theme.$white-color;
+    font-size: clamp(1.5rem, 2.5vw, 1.9rem);
+  }
+
+  button {
+    background: theme.$red-color;
+    border: none;
+    padding: 0.8em;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:hover {
+      background: hsl(359, 83%, 45%);
+    }
+  }
+}
+
+@media (min-width: 40em) {
+  .navbar {
+    padding: 0.9em 2em;
+  }
+}

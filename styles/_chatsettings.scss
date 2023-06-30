@@ -1,0 +1,66 @@
+@use "colors" as theme;
+
+.ce-settings {
+  background-color: theme.$sidebar-color !important;
+  border: 3px solid theme.$sidebar-color !important;
+  border-radius: 0px !important;
+  overflow: hidden !important;
+}
+
+.ce-chat-title {
+  background-color: theme.$chatfeed-color !important;
+}
+
+.ce-chat-title-form .ce-text-input {
+  margin-top: 1em;
+  margin-bottom: 2em;
+  border-radius: 5px !important;
+}
+
+.ce-section-title-container {
+  border: 1px solid theme.$white-color;
+  background-color: theme.$white-color !important;
+  color: theme.$black-color;
+}
+
+#ce-options-drop-down {
+  border: 1px solid theme.$white-color;
+  background-color: theme.$white-color !important;
+  color: theme.$black-color;
+}
+
+#ce-add-username-input {
+  border-radius: 5px !important;
+}
+
+.ce-autocomplete-options {
+  border-radius: 5px !important;
+}
+
+.ce-person-text {
+  color: theme.$white-color;
+}
+
+.ce-danger-button {
+  background-color: theme.$red-color !important;
+  border: 1px solid theme.$red-color !important;
+  color: theme.$white-color !important;
+}
+
+.ce-autocomplete-close {
+  background-color: theme.$white-color !important;
+  border-radius: 0px !important;
+}
+
+.ce-chat-avatars-row {
+  display: none !important;
+}
+
+.ce-chat-settings-mobile-option > div > div {
+  background: theme.$sidebar-color !important;
+  color: theme.$white-color !important;
+}
+
+.ce-chat-settings-mobile-option > div > div > div {
+  color: theme.$white-color !important;
+}

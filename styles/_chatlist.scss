@@ -1,0 +1,46 @@
+@use "colors" as theme;
+
+.ce-chat-list {
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+  border: 3px solid theme.$sidebar-color !important;
+}
+
+.ce-chats-container {
+  background-color: theme.$sidebar-color !important;
+  border-radius: 0px !important;
+}
+
+.ce-chat-form-container {
+  background-color: theme.$sidebar-color !important;
+  color: theme.$white-color !important;
+  padding-bottom: 2em !important;
+}
+
+.ce-chat-form-container form input {
+  border-radius: 5px !important;
+}
+
+.ce-chat-card {
+  border-radius: 0px !important;
+}
+
+.ce-chat-card-loading-bar {
+  background-color: theme.$gray-color !important;
+}
+
+.ce-active-chat-card {
+  background-color: theme.$light-purple-color !important;
+}
+
+.ce-chat-title-text {
+  color: theme.$white-color !important;
+}
+
+.ce-chat-subtitle-text {
+  color: theme.$gray-color !important;
+}
+
+.ce-chat-unread-dot {
+  background-color: theme.$white-color !important;
+}
