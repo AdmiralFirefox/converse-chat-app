@@ -1,5 +1,11 @@
 @use "colors" as theme;
 
+.ce-settings-container {
+  width: min(40em, 85%) !important;
+  margin: 0 auto !important;
+  padding-left: 0 !important;
+}
+
 .ce-settings {
   background-color: theme.$sidebar-color !important;
   border: 3px solid theme.$sidebar-color !important;
