@@ -5,6 +5,7 @@ import { AuthContext } from "@/lib/authcontext";
 import { auth } from "@/lib/firebase";
 import { GoogleAuthProvider, signInWithPopup, signOut } from "firebase/auth";
 import ChatRoom from "./ChatRoom";
+import SignIn from "./SignIn";
 
 const AuthForm = () => {
   const user = useContext(AuthContext);
@@ -29,10 +30,7 @@ const AuthForm = () => {
   return (
     <>
       {!user ? (
-        <>
-          <h1> Sign In</h1>
-          <button onClick={signInWithgoogle}>Sign In With Google</button>
-        </>
+        <SignIn signInWithgoogle={signInWithgoogle} />
       ) : (
         <ChatRoom user={user} signOutAccount={signOutAccount} />
       )}
