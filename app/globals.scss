@@ -1,6 +1,7 @@
 @use "../styles/chatlist";
 @use "../styles/chatfeed";
 @use "../styles/chatsettings";
+@use "../styles/colors" as theme;
 
 :root {
   color-scheme: dark;
@@ -17,4 +18,8 @@ html,
 body {
   overflow-x: hidden;
   position: relative;
+}
+
+body {
+  background: theme.$black-color;
 }

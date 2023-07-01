@@ -5,6 +5,7 @@ import { ChatEngine } from "react-chat-engine";
 import { UserInfo } from "@/lib/authcontext";
 import { useElementSize } from "@/hooks/useElementSize";
 import { useWindowSize } from "@/hooks/useWindowSize";
+import Loading from "./Loading";
 import styles from "@/styles/ChatRoom.module.scss";
 
 interface ChatRoomProps {
@@ -68,11 +69,7 @@ const ChatRoom = ({ user, signOutAccount }: ChatRoomProps) => {
   }, [user]);
 
   if (!user || loading) {
-    return (
-      <div>
-        <h1>Loading...</h1>
-      </div>
-    );
+    return <Loading message="Loading Chats" />;
   }
 
   return (
