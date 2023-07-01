@@ -16,7 +16,7 @@ const SignIn = ({ signInWithgoogle }: SignInProps) => {
               <Image src="/chat.png" alt="Chat Icon" fill sizes="100vw" />
             </div>
           </div>
-          <p>Chat with your close ones now!</p>
+          <p>Communicate with everyone now!</p>
           <button onClick={signInWithgoogle}>
             Sign In With Google
             <Image
